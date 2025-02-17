@@ -1,0 +1,35 @@
+ALGORITHM Compteurs-Phrase
+VAR
+
+    chaine:STRING;
+    carCourant:CHAR;
+    cptCar:INTEGER :=0;
+    cptMot:INTEGER :=0; 
+    cptVoyelle:INTEGER:=0;
+
+BEGIN
+    Write("entrer la phrase."); //input
+    read(chaine);
+
+    // traitement
+    carCourant =chaine[0] //premier caractère de la chaine
+    WHILE(carCourant <> '.') DO
+        cptCar = cptCar +1;
+    IF (carCourant = ' ') THEN
+        cptMot := cptMot +1;
+     END_IF     
+    
+    IF ( carCourant='a' or carCourant='A' or carCourant='e' or carCourant='E' or carCourant='i' or carCourant='I' or
+        carCourant='o' or carCourant='O' or carCourant='u' or carCourant='U' or carCourant='y' or carCourant='Y' or    ) THEN
+            cptVoyelle= cptVoyelle +1; 
+
+        // changement
+        carCourant:= chaine[cptCar]
+    END_IF
+    
+    END_WHILE
+    // output: les compteurs
+    Write("le nbre de caractères dans cette phrase est:", cptCar);
+    Write("le nbre de mots dans cette phrase est:", cptMot);
+    Write("le nbre de voyelles dans cette phrase est:", cptVoyelle);
+END
