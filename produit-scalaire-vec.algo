@@ -1,0 +1,24 @@
+ALGORITHM dot_product
+VAR
+    Tableau V(n): FLOAT ;
+    tableau U(n): FLOAT;
+    i: INTEGER;
+    Ps: FLOAT
+BEGIN
+FOR i= 0 TO n-1  DO
+    Write("entrer l'élément", i+1, "du vecteur V");
+    Read(V(i));
+    Write("entrer l'élément", i+1, "du vecteur U");
+    Read(U(i));
+END_FOR
+FOR Ps  FROM i=0 TO i DO
+    Ps:=Ps + V(i)*U(i);
+END_FOR
+
+   
+IF (Ps=0) THEN
+     Write("Les vecteurs sont orthogonaux.");
+ELSE
+     Write("Les vecteurs ne sont pas orthogonaux.");
+END_IF
+END

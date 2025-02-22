@@ -17,7 +17,7 @@ BEGIN
         cptCar = cptCar +1;
     IF (carCourant = ' ') THEN
         cptMot := cptMot +1;
-     END_IF     
+    END_IF     
     
     IF ( carCourant='a' or carCourant='A' or carCourant='e' or carCourant='E' or carCourant='i' or carCourant='I' or
         carCourant='o' or carCourant='O' or carCourant='u' or carCourant='U' or carCourant='y' or carCourant='Y' or    ) THEN
